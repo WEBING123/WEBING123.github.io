@@ -4,11 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="jQuery 文档操作方法, Webing">
-    <meta name="description" content="本文列出jQuery中几乎所有的DOM操作方法。使用这些方法可以非常简单方便地对文档进行操作处理。
-添加/删除 class$(&#34;div&#34;).addClass(&#34;classOne&#34;).removeClass(&#34;classTwo&#34;);
+    <meta name="keywords" content="JavaScript String（字符串）操作, Webing">
+    <meta name="description" content="
 
-插入 ">
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>jQuery 文档操作方法 | Webing</title>
+    <title>JavaScript String（字符串）操作 | Webing</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -256,13 +255,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        jQuery 文档操作方法
+                        JavaScript String（字符串）操作
                     </div>
                 </div>
             </div>
@@ -373,8 +372,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/jQuery/" target="_blank">
-                                <span class="chip bg-color">jQuery</span>
+                            <a href="/tags/JavaScript/" target="_blank">
+                                <span class="chip bg-color">JavaScript</span>
                             </a>
                         
                     </div>
@@ -385,8 +384,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/jQuery/" class="post-category" target="_blank">
-                                jQuery
+                            <a href="/categories/JavaScript/" class="post-category" target="_blank">
+                                JavaScript
                             </a>
                         
                     </div>
@@ -413,54 +412,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>本文列出jQuery中几乎所有的DOM操作方法。使用这些方法可以非常简单方便地对文档进行操作处理。</p>
-<h2 id="添加-删除-class"><a href="#添加-删除-class" class="headerlink" title="添加/删除 class"></a>添加/删除 class</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addClass</span><span class="token punctuation">(</span><span class="token string">"classOne"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeClass</span><span class="token punctuation">(</span><span class="token string">"classTwo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<h2 id="插入-html"><a href="#插入-html" class="headerlink" title="插入 html"></a>插入 html</h2><h3 id="after"><a href="#after" class="headerlink" title="after()"></a>after()</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span>
-
-<span class="token comment" spellcheck="true">// after()    在匹配的元素之后插入内容。</span>
-<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#after"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    i <span class="token operator">+</span><span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#tbody"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">after</span><span class="token punctuation">(</span>
-        <span class="token string">'&lt;tr class="table-info">'</span> <span class="token operator">+</span>
-        <span class="token string">'&lt;td scope="row">after()&lt;/td>'</span> <span class="token operator">+</span>
-        <span class="token string">'&lt;td>之后插入'</span> <span class="token operator">+</span> i <span class="token operator">+</span>
-        <span class="token string">'&lt;/td>'</span> <span class="token operator">+</span>
-        <span class="token string">'&lt;/tr>'</span>
-    <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<p><img src="/2019/03/16/jqueryDocOperation/after.png" alt="Brother Element"></p>
-<h3 id="prepend"><a href="#prepend" class="headerlink" title="prepend()"></a>prepend()</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span>
-
-<span class="token comment" spellcheck="true">// prepend()    向匹配元素集合中的每个元素开头插入由参数指定的内容。</span>
-<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#prepend"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    i <span class="token operator">+</span><span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#tbody"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">prepend</span><span class="token punctuation">(</span>
-        <span class="token string">'&lt;tr class="table-info">'</span> <span class="token operator">+</span>
-        <span class="token string">'&lt;td scope="row">prepend()&lt;/td>'</span> <span class="token operator">+</span>
-        <span class="token string">'&lt;td>开头插入'</span> <span class="token operator">+</span> i <span class="token operator">+</span>
-        <span class="token string">'&lt;/td>'</span> <span class="token operator">+</span>
-        <span class="token string">'&lt;/tr>'</span>
-    <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<p><img src="/2019/03/16/jqueryDocOperation/prepend.png" alt="Child Element"></p>
-<h3 id="append"><a href="#append" class="headerlink" title="append()"></a>append()</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span>
-
-<span class="token comment" spellcheck="true">// append()    向匹配元素集合中的每个元素结尾插入由参数指定的内容。</span>
-<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#append"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    i <span class="token operator">+</span><span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#tbody"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>
-        <span class="token string">'&lt;tr class="table-info">'</span> <span class="token operator">+</span>
-        <span class="token string">'&lt;td scope="row">append()&lt;/td>'</span> <span class="token operator">+</span>
-        <span class="token string">'&lt;td>结尾插入'</span> <span class="token operator">+</span> i <span class="token operator">+</span>
-        <span class="token string">'&lt;/td>'</span> <span class="token operator">+</span>
-        <span class="token string">'&lt;/tr>'</span>
-    <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<p><img src="/2019/03/16/jqueryDocOperation/append.png" alt="Child Element"></p>
+                <hr>
+<p><img src="/2019/03/16/jsStringOperating/url.png" alt="URL"></p>
 
             </div>
             <hr>
@@ -608,7 +561,7 @@
                     </span>
                     <a href="http://yoursite.com" class="b-link-green">Webing</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/03/16/jqueryDocOperation/" class="b-link-green">jQuery 文档操作方法</a>
+                    <a href="/2019/03/16/jsStringOperating/" class="b-link-green">JavaScript String（字符串）操作</a>
                 </p>
             </div>
         </div>
@@ -631,7 +584,8 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2019/03/16/jsStringOperating/">
                     <div class="card-image">
@@ -647,9 +601,9 @@
 
 </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -662,6 +616,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -677,7 +632,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2019/03/16/jqueryDocOperation/">
@@ -710,7 +665,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
